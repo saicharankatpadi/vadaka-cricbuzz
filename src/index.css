@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply bg-[#0a0a0a] text-white min-h-screen overflow-x-hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-text-live {
+    @apply bg-gradient-to-r from-[#ff6b35] via-[#f7931e] to-[#ffd700] bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-score {
+    @apply bg-gradient-to-r from-[#00f260] to-[#0575e6] bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-stream {
+    @apply bg-gradient-to-r from-[#667eea] to-[#764ba2] bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-stats {
+    @apply bg-gradient-to-r from-[#f093fb] to-[#f5576c] bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-commentary {
+    @apply bg-gradient-to-r from-[#4facfe] to-[#00f2fe] bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-replay {
+    @apply bg-gradient-to-r from-[#43e97b] to-[#38f9d7] bg-clip-text text-transparent;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  .glass-button {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-full 
+           hover:bg-white/20 transition-all duration-300;
+  }
+
+  .tab-active-green {
+    @apply text-green-400 after:bg-green-400 after:shadow-[0_0_20px_rgba(74,222,128,0.5)];
+  }
+  
+  .tab-active-yellow {
+    @apply text-amber-400 after:bg-amber-400 after:shadow-[0_0_20px_rgba(251,191,36,0.5)];
+  }
+  
+  .tab-active-pink {
+    @apply text-pink-400 after:bg-pink-400 after:shadow-[0_0_20px_rgba(244,114,182,0.5)];
+  }
+  
+  .tab-active-purple {
+    @apply text-purple-400 after:bg-purple-400 after:shadow-[0_0_20px_rgba(167,139,250,0.5)];
+  }
+  
+  .tab-active-blue {
+    @apply text-sky-400 after:bg-sky-400 after:shadow-[0_0_20px_rgba(56,189,248,0.5)];
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
