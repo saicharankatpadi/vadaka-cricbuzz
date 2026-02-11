@@ -8,7 +8,8 @@ import FloatingParticles from './components/FloatingParticles';
 import Header from './components/Header';
 import SideMenu from './components/SideMenu';
 import HighlightsCarousel from './components/HighlightsCarousel';
-
+// --- ADDED THIS IMPORT ---
+import ErrorPage from './pages/ErrorPage';
 // Placeholder pages for navigation
 const Matches = () => <div className="pt-20 text-white text-center">Matches Page</div>;
 const Standings = () => <div className="pt-20 text-white text-center">Standings Page</div>;
@@ -30,7 +31,7 @@ function App() {
         <Header onMenuClick={() => setIsSideMenuOpen(true)} />
         <SideMenu isOpen={isSideMenuOpen} onClose={() => setIsSideMenuOpen(false)} />
           {/* Highlights Carousel - Right below header, no padding-top needed */}
-      <HighlightsCarousel />
+    
         {/* Background */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div 
@@ -51,6 +52,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
+                <HighlightsCarousel />
                 <HeroSection />
                
                 <VideoSection />
@@ -62,7 +64,12 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/stats" element={<Stats />} />
+          
+          
             <Route path="/game-hub" element={<GameHub />} />
+             {/* --- ADDED THIS CATCH-ALL ERROR ROUTE --- */}
+            <Route path="*" element={<ErrorPage />} />
+          
           </Routes>
         </main>
 

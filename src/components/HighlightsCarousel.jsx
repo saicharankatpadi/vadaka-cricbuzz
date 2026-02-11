@@ -98,7 +98,7 @@ const HighlightsCarousel = () => {
 
   if (isLoading) {
     return (
-      <div className="bg-[#0a0e2e] py-4 border-b border-white/10">
+      <div className="bg-[#0a0e2e] pt-4 mt-4 opacity-80 py-4 border-b border-white/10">
         <div className="flex gap-3 px-4 overflow-hidden">
           {[1, 2, 3, 4, 5].map((i) => (
             <div key={i} className="flex-shrink-0 w-12 h-12 bg-white/5 rounded-full animate-pulse" />

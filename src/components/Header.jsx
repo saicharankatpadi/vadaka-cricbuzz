@@ -75,7 +75,7 @@ const Header = ({ onMenuClick }) => {
               <img 
                 src="/images/vadaka.svg" 
                 alt="Vadaka Cricket" 
-                className="w-12 h-12 object-contain drop-shadow-lg"
+                className="w-20 h-20 object-contain drop-shadow-lg"
               />
               {/* Site Name - hidden on mobile */}
               <span className="hidden md:block text-white font-bold text-lg tracking-tight">
