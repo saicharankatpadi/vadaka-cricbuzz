@@ -58,13 +58,15 @@ export default function HeroSection() {
   const currentWord = words[wordIndex];
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6   lg:px-8 py-20">
       {/* Badge */}
       <div className="animate-fade-in-down inline-flex items-center gap-2 glass-button px-6 py-3 mb-10">
         <div className="w-5 h-5 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
           <Zap className="w-3 h-3 text-white" />
         </div>
-        <span className="text-sm font-semibold">Live Cricket Broadcasting Platform</span>
+        <div className="ml-[10px]">
+        <span className="text-sm  font-semibold">Live Cricket Broadcasting Platform</span>
+         </div>
       </div>
 
       {/* Logo */}

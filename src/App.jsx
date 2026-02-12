@@ -9,7 +9,9 @@ import Header from './components/Header';
 import SideMenu from './components/SideMenu';
 import HighlightsCarousel from './components/HighlightsCarousel';
 // --- ADDED THIS IMPORT ---
+import Footer from './components/Footer';
 import ErrorPage from './pages/ErrorPage';
+import Venues from './components/Venues';
 // Placeholder pages for navigation
 const Matches = () => <div className="pt-20 text-white text-center">Matches Page</div>;
 const Standings = () => <div className="pt-20 text-white text-center">Standings Page</div>;
@@ -31,7 +33,7 @@ function App() {
         <Header onMenuClick={() => setIsSideMenuOpen(true)} />
         <SideMenu isOpen={isSideMenuOpen} onClose={() => setIsSideMenuOpen(false)} />
           {/* Highlights Carousel - Right below header, no padding-top needed */}
-    
+        
         {/* Background */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div 
@@ -65,7 +67,7 @@ function App() {
             <Route path="/videos" element={<Videos />} />
             <Route path="/stats" element={<Stats />} />
           
-          
+           <Route path="/venues" element={<Venues />} />
             <Route path="/game-hub" element={<GameHub />} />
              {/* --- ADDED THIS CATCH-ALL ERROR ROUTE --- */}
             <Route path="*" element={<ErrorPage />} />
@@ -74,6 +76,7 @@ function App() {
         </main>
 
         <MatchWidget />
+        <Footer/>
       </div>
     </Router>
   );
